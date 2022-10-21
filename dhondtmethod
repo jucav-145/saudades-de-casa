@@ -1,7 +1,7 @@
 ### script para calcular distribuição de cadeiras pelo #hondtmethod #dhondtmethod #metododhindt #metodohondt. 
 Abaixo, as votações de cada partido na eleição de Deputado Federal pelo Estado do Rio Grande do Sul nas Eleições Gerais do Brasil de 2022.
-### script to calculate seat distribution by the #hondtmethod #dhondtmethod. Including the numbers for each party in the MP
-Election in Rio Grande do Sul State in the 2022 General Elections.
+### script to calculate seat distribution by the #hondtmethod #dhondtmethod. Including the voto numbers for each party in the MP
+Election in Rio Grande do Sul State at the 2022 General Elections.
 
 
 def dhont2(nSeats,votes,verbose=False):
