@@ -4,7 +4,7 @@ Abaixo, as votações de cada partido na eleição de Deputado Federal pelo Esta
 Election in Rio Grande do Sul State at the 2022 General Elections.
 
 
-def dhont2(nSeats,votes,verbose=False):
+def dhont(nSeats,votes,verbose=False):
     """
     nSeats is the number of seats (número de cadeiras)
     votes is a dictionary with the key:value {'party':votes} (votos de cada partido)
