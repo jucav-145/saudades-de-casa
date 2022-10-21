@@ -1,3 +1,0 @@
-A = "xavrau"
-B = (A).upper()
-B
