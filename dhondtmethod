@@ -1,0 +1,35 @@
+### script para calcular distribuição de cadeiras pelo #hondtmethod #dhondtmethod #metododhindt #metodohondt. 
+Abaixo, as votações de cada partido na eleição de Deputado Federal pelo Estado do Rio Grande do Sul nas Eleições Gerais do Brasil de 2022.
+### script to calculate seat distribution by the #hondtmethod #dhondtmethod. Including the numbers for each party in the MP
+Election in Rio Grande do Sul State in the 2022 General Elections.
+
+
+def dhont2(nSeats,votes,verbose=False):
+    """
+    nSeats is the number of seats (número de cadeiras)
+    votes is a dictionary with the key:value {'party':votes} (votos de cada partido)
+    verbose is an option to print designation info (apresentaçãp dos cálculos de distribuição de cada cadeira)
+    """
+    t_votes=votes.copy()
+    seats={}
+    for key in votes: seats[key]=0
+    while sum(seats.values()) < nSeats:
+        max_v= max(t_votes.values())
+        next_seat=list(t_votes.keys())[list(t_votes.values()).index(max_v)]
+        if next_seat in seats:
+            seats[next_seat]+=1
+        else:
+            seats[next_seat]=1
+        
+        if verbose:
+            print("{} Cadeira: {}".format(sum(seats.values()),next_seat))
+            for key in t_votes:
+                print("\t{} [{}]: {:.1f}".format(key,seats[key],t_votes[key]))
+            print("\b")
+        t_votes[next_seat]=votes[next_seat]/(seats[next_seat]+1)
+    return seats
+
+{'AVANTE ':39776,'PL':680192,'PSTU':1842,'PDT':321317, 'NOVO': 301966, 'DC':1187, 'PSC': 29346, 
+         'PSD': 295357, 'PODE': 318850, 'PROS': 1869, 'PCB':3661, 'PP':531612, 'PATRI': 28516, 'AGIR':425, 
+         'PRTB': 2656, 'MDB':586325, 'REP':549530, 'UP':2086, 'PTB':89766, 'UNIAO':216268, 'PSB':193200, 
+         'PSDB/CID':480995, 'PSOL/REDE':303180, 'PT/PCdoB/PV': 1168128}
