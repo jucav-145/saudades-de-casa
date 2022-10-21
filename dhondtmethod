@@ -8,7 +8,7 @@ def dhont2(nSeats,votes,verbose=False):
     """
     nSeats is the number of seats (número de cadeiras)
     votes is a dictionary with the key:value {'party':votes} (votos de cada partido)
-    verbose is an option to print designation info (apresentaçãp dos cálculos de distribuição de cada cadeira)
+    verbose is an option to print designation info (apresentação dos cálculos de distribuição de cada cadeira)
     """
     t_votes=votes.copy()
     seats={}
